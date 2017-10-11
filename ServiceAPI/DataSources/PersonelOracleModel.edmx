@@ -1,0 +1,360 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="PersonelOracleModel.Store" Provider="Oracle.ManagedDataAccess.Client" ProviderManifestToken="10.2" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="C_TITLE">
+          <Key>
+            <PropertyRef Name="TITLE_ID" />
+          </Key>
+          <Property Name="TITLE_ID" Type="varchar2" MaxLength="2" Nullable="false" />
+          <Property Name="TITLE_NAME_THAI" Type="varchar2" MaxLength="25" />
+          <Property Name="TITLE_NAME_ENG" Type="varchar2" MaxLength="25" />
+          <Property Name="TITLE_SHORT_THAI" Type="varchar2" MaxLength="20" />
+          <Property Name="TITLE_SHORT_ENG" Type="varchar2" MaxLength="40" />
+        </EntityType>
+        <EntityType Name="P_STAFF">
+          <Key>
+            <PropertyRef Name="STAFF_ID" />
+          </Key>
+          <Property Name="STAFF_ID" Type="varchar2" MaxLength="7" Nullable="false" />
+          <Property Name="STAFF_TYPE_ID" Type="varchar2" MaxLength="1" />
+          <Property Name="STAFF_NAME_THAI" Type="varchar2" MaxLength="40" />
+          <Property Name="STAFF_NAME_ENG" Type="varchar2" MaxLength="45" />
+          <Property Name="STAFF_SNAME_THAI" Type="varchar2" MaxLength="40" />
+          <Property Name="STAFF_SNAME_ENG" Type="varchar2" MaxLength="45" />
+          <Property Name="TITLE_ID" Type="varchar2" MaxLength="2" />
+          <Property Name="SEX_ID" Type="varchar2" MaxLength="1" />
+          <Property Name="STAFF_BIRTH_DATE" Type="varchar2" MaxLength="8" />
+          <Property Name="PROV_ID" Type="varchar2" MaxLength="2" />
+          <Property Name="GRAD_ID" Type="varchar2" MaxLength="2" />
+          <Property Name="MARRIED_ID" Type="varchar2" MaxLength="1" />
+          <Property Name="RELIGION_ID" Type="varchar2" MaxLength="1" />
+          <Property Name="STAFF_SEAT_ID" Type="varchar2" MaxLength="4" />
+          <Property Name="STAFF_TAX_NUM" Type="varchar2" MaxLength="13" />
+          <Property Name="STAFF_APPROV_NUM" Type="varchar2" MaxLength="3" />
+          <Property Name="POS_ID" Type="varchar2" MaxLength="4" />
+          <Property Name="SALARY_C" Type="number" Precision="2" Scale="0" />
+          <Property Name="SALARY_RANK" Type="number" Precision="6" Scale="2" />
+          <Property Name="SALARY" Type="number" Precision="7" Scale="0" />
+          <Property Name="STAFF_SAL_STEP" Type="number" Precision="4" Scale="2" />
+          <Property Name="STAFF_APPROV_YEAR" Type="number" Precision="4" Scale="0" />
+          <Property Name="STAFF_ACCEPT_DATE" Type="varchar2" MaxLength="8" />
+          <Property Name="CAMPUS_ID" Type="varchar2" MaxLength="2" />
+          <Property Name="PLAN_ID" Type="varchar2" MaxLength="2" />
+          <Property Name="JOB_ID" Type="varchar2" MaxLength="4" />
+          <Property Name="FAC_ID" Type="varchar2" MaxLength="2" />
+          <Property Name="DEPT_ID" Type="varchar2" MaxLength="3" />
+          <Property Name="SECT_ID" Type="varchar2" MaxLength="3" />
+          <Property Name="STAFF_BLOOD" Type="varchar2" MaxLength="20" />
+          <Property Name="STAFF_PICTURE" Type="varchar2" MaxLength="12" />
+          <Property Name="STAFF_DEPART" Type="varchar2" MaxLength="1" />
+          <Property Name="STAFF_EMAIL" Type="varchar2" MaxLength="40" />
+          <Property Name="STAFF_END" Type="varchar2" MaxLength="8" />
+          <Property Name="TITLE_NAME" Type="varchar2" MaxLength="20" />
+          <Property Name="STAFF_STEP_TYPE" Type="varchar2" MaxLength="1" />
+          <Property Name="UNIT_ID" Type="varchar2" MaxLength="3" />
+          <Property Name="STAFF_TYPE" Type="varchar2" MaxLength="1" />
+          <Property Name="DATE_ID" Type="varchar2" MaxLength="8" />
+          <Property Name="STAFF_OUT" Type="varchar2" MaxLength="7" />
+          <Property Name="STAFF_PERS_ID" Type="varchar2" MaxLength="13" />
+          <Property Name="OLD_STAFF_ID" Type="varchar2" MaxLength="7" />
+          <Property Name="MAIN_MAJOR" Type="varchar2" MaxLength="80" />
+          <Property Name="NEWID" Type="varchar2" MaxLength="7" />
+          <Property Name="STAFF_DATE_OUT" Type="varchar2" MaxLength="8" />
+          <Property Name="NUM_REST" Type="number" Precision="6" Scale="2" />
+          <Property Name="STAFF_FULL_SAL" Type="varchar2" MaxLength="1" />
+          <Property Name="SUBUNIT_ID" Type="varchar2" MaxLength="3" />
+          <Property Name="OLD_SALARY_C" Type="number" Precision="2" Scale="0" />
+          <Property Name="OLD_SALARY" Type="number" Precision="5" Scale="0" />
+          <Property Name="ADM_POS" Type="varchar2" MaxLength="2" />
+          <Property Name="STAFF_NO" Type="varchar2" MaxLength="4" />
+          <Property Name="BUDGET_SALARY" Type="number" Precision="5" Scale="0" />
+          <Property Name="BUDGET_TIME" Type="number" Precision="5" Scale="0" />
+          <Property Name="WORK_TIME" Type="number" Precision="5" Scale="0" />
+          <Property Name="WORK_COND" Type="varchar2" MaxLength="200" />
+          <Property Name="INS_ID" Type="varchar2" MaxLength="20" />
+          <Property Name="USE_YEAR1" Type="number" Precision="4" Scale="0" />
+          <Property Name="USE_YEAR2" Type="number" Precision="4" Scale="0" />
+          <Property Name="YEAR_BLANK" Type="number" Precision="4" Scale="0" />
+          <Property Name="POS_LACK" Type="varchar2" MaxLength="1" />
+          <Property Name="INCOME_SALARY" Type="number" Precision="5" Scale="0" />
+          <Property Name="WORK_TIME_DAY" Type="number" Precision="3" Scale="0" />
+          <Property Name="EXIT_STS" Type="number" Precision="3" Scale="0" />
+          <Property Name="P_RACE" Type="varchar2" MaxLength="20" />
+          <Property Name="AMT_TYPE" Type="varchar2" MaxLength="20" />
+          <Property Name="P_COUNTRY" Type="varchar2" MaxLength="20" />
+          <Property Name="P_CITIZEN" Type="varchar2" MaxLength="20" />
+          <Property Name="WORK_BEGIN" Type="varchar2" MaxLength="8" />
+          <Property Name="WORK_END" Type="varchar2" MaxLength="8" />
+          <Property Name="SALARY_OCT_PYEAR" Type="number" Precision="6" Scale="0" />
+          <Property Name="SALARY_C_OCT" Type="number" Precision="2" Scale="0" />
+          <Property Name="STEP_OCT" Type="number" Precision="6" Scale="2" />
+          <Property Name="SAL_STEP_OLD" Type="number" Precision="4" Scale="2" />
+          <Property Name="REST_COLL" Type="number" Precision="4" Scale="2" />
+          <Property Name="REST_USED" Type="number" Precision="4" Scale="2" />
+          <Property Name="TITLE_NAME2" Type="varchar2" MaxLength="40" />
+          <Property Name="PERCENT_INC" Type="number" Precision="4" Scale="2" />
+          <Property Name="TITLE2_NAME_ENG" Type="varchar2" MaxLength="40" />
+          <Property Name="ENTRY_NO" Type="number" Precision="2" Scale="0" />
+          <Property Name="TITLE_NAME3" Type="varchar2" MaxLength="40" />
+          <Property Name="TITLE_NAME3_ENG" Type="varchar2" MaxLength="40" />
+          <Property Name="EMP_TYPE" Type="varchar2" MaxLength="2" />
+          <Property Name="EMP_SOURCE" Type="varchar2" MaxLength="2" />
+          <Property Name="LOGIN" Type="varchar2" MaxLength="15" />
+          <Property Name="MODIFY_DATE" Type="varchar2" MaxLength="100" />
+          <Property Name="MODIFY_USER" Type="varchar2" MaxLength="50" />
+          <Property Name="EMP_HEAD" Type="varchar2" MaxLength="50" />
+        </EntityType>
+        <EntityContainer Name="PersonelOracleModelStoreContainer">
+          <EntitySet Name="C_TITLE" EntityType="Self.C_TITLE" Schema="CENTRAL" store:Type="Tables" />
+          <EntitySet Name="P_STAFF" EntityType="Self.P_STAFF" Schema="PERSONEL" store:Type="Tables" />
+        </EntityContainer>
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="PersonelOracleModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="P_STAFF">
+          <Key>
+            <PropertyRef Name="STAFF_ID" />
+          </Key>
+          <Property Name="STAFF_ID" Type="String" MaxLength="7" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="STAFF_TYPE_ID" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+          <Property Name="STAFF_NAME_THAI" Type="String" MaxLength="40" FixedLength="false" Unicode="false" />
+          <Property Name="STAFF_NAME_ENG" Type="String" MaxLength="45" FixedLength="false" Unicode="false" />
+          <Property Name="STAFF_SNAME_THAI" Type="String" MaxLength="40" FixedLength="false" Unicode="false" />
+          <Property Name="STAFF_SNAME_ENG" Type="String" MaxLength="45" FixedLength="false" Unicode="false" />
+          <Property Name="TITLE_ID" Type="String" MaxLength="2" FixedLength="false" Unicode="false" />
+          <Property Name="SEX_ID" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+          <Property Name="STAFF_BIRTH_DATE" Type="String" MaxLength="8" FixedLength="false" Unicode="false" />
+          <Property Name="PROV_ID" Type="String" MaxLength="2" FixedLength="false" Unicode="false" />
+          <Property Name="GRAD_ID" Type="String" MaxLength="2" FixedLength="false" Unicode="false" />
+          <Property Name="MARRIED_ID" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+          <Property Name="RELIGION_ID" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+          <Property Name="STAFF_SEAT_ID" Type="String" MaxLength="4" FixedLength="false" Unicode="false" />
+          <Property Name="STAFF_TAX_NUM" Type="String" MaxLength="13" FixedLength="false" Unicode="false" />
+          <Property Name="STAFF_APPROV_NUM" Type="String" MaxLength="3" FixedLength="false" Unicode="false" />
+          <Property Name="POS_ID" Type="String" MaxLength="4" FixedLength="false" Unicode="false" />
+          <Property Name="SALARY_C" Type="Byte" />
+          <Property Name="SALARY_RANK" Type="Decimal" Precision="6" Scale="2" />
+          <Property Name="SALARY" Type="Int32" />
+          <Property Name="STAFF_SAL_STEP" Type="Decimal" Precision="4" Scale="2" />
+          <Property Name="STAFF_APPROV_YEAR" Type="Int16" />
+          <Property Name="STAFF_ACCEPT_DATE" Type="String" MaxLength="8" FixedLength="false" Unicode="false" />
+          <Property Name="CAMPUS_ID" Type="String" MaxLength="2" FixedLength="false" Unicode="false" />
+          <Property Name="PLAN_ID" Type="String" MaxLength="2" FixedLength="false" Unicode="false" />
+          <Property Name="JOB_ID" Type="String" MaxLength="4" FixedLength="false" Unicode="false" />
+          <Property Name="FAC_ID" Type="String" MaxLength="2" FixedLength="false" Unicode="false" />
+          <Property Name="DEPT_ID" Type="String" MaxLength="3" FixedLength="false" Unicode="false" />
+          <Property Name="SECT_ID" Type="String" MaxLength="3" FixedLength="false" Unicode="false" />
+          <Property Name="STAFF_BLOOD" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="STAFF_PICTURE" Type="String" MaxLength="12" FixedLength="false" Unicode="false" />
+          <Property Name="STAFF_DEPART" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+          <Property Name="STAFF_EMAIL" Type="String" MaxLength="40" FixedLength="false" Unicode="false" />
+          <Property Name="STAFF_END" Type="String" MaxLength="8" FixedLength="false" Unicode="false" />
+          <Property Name="TITLE_NAME" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="STAFF_STEP_TYPE" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+          <Property Name="UNIT_ID" Type="String" MaxLength="3" FixedLength="false" Unicode="false" />
+          <Property Name="STAFF_TYPE" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+          <Property Name="DATE_ID" Type="String" MaxLength="8" FixedLength="false" Unicode="false" />
+          <Property Name="STAFF_OUT" Type="String" MaxLength="7" FixedLength="false" Unicode="false" />
+          <Property Name="STAFF_PERS_ID" Type="String" MaxLength="13" FixedLength="false" Unicode="false" />
+          <Property Name="OLD_STAFF_ID" Type="String" MaxLength="7" FixedLength="false" Unicode="false" />
+          <Property Name="MAIN_MAJOR" Type="String" MaxLength="80" FixedLength="false" Unicode="false" />
+          <Property Name="NEWID" Type="String" MaxLength="7" FixedLength="false" Unicode="false" />
+          <Property Name="STAFF_DATE_OUT" Type="String" MaxLength="8" FixedLength="false" Unicode="false" />
+          <Property Name="NUM_REST" Type="Decimal" Precision="6" Scale="2" />
+          <Property Name="STAFF_FULL_SAL" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+          <Property Name="SUBUNIT_ID" Type="String" MaxLength="3" FixedLength="false" Unicode="false" />
+          <Property Name="OLD_SALARY_C" Type="Byte" />
+          <Property Name="OLD_SALARY" Type="Int16" />
+          <Property Name="ADM_POS" Type="String" MaxLength="2" FixedLength="false" Unicode="false" />
+          <Property Name="STAFF_NO" Type="String" MaxLength="4" FixedLength="false" Unicode="false" />
+          <Property Name="BUDGET_SALARY" Type="Int16" />
+          <Property Name="BUDGET_TIME" Type="Int16" />
+          <Property Name="WORK_TIME" Type="Int16" />
+          <Property Name="WORK_COND" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+          <Property Name="INS_ID" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="USE_YEAR1" Type="Int16" />
+          <Property Name="USE_YEAR2" Type="Int16" />
+          <Property Name="YEAR_BLANK" Type="Int16" />
+          <Property Name="POS_LACK" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+          <Property Name="INCOME_SALARY" Type="Int16" />
+          <Property Name="WORK_TIME_DAY" Type="Byte" />
+          <Property Name="EXIT_STS" Type="Byte" />
+          <Property Name="P_RACE" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="AMT_TYPE" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="P_COUNTRY" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="P_CITIZEN" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="WORK_BEGIN" Type="String" MaxLength="8" FixedLength="false" Unicode="false" />
+          <Property Name="WORK_END" Type="String" MaxLength="8" FixedLength="false" Unicode="false" />
+          <Property Name="SALARY_OCT_PYEAR" Type="Int32" />
+          <Property Name="SALARY_C_OCT" Type="Byte" />
+          <Property Name="STEP_OCT" Type="Decimal" Precision="6" Scale="2" />
+          <Property Name="SAL_STEP_OLD" Type="Decimal" Precision="4" Scale="2" />
+          <Property Name="REST_COLL" Type="Decimal" Precision="4" Scale="2" />
+          <Property Name="REST_USED" Type="Decimal" Precision="4" Scale="2" />
+          <Property Name="TITLE_NAME2" Type="String" MaxLength="40" FixedLength="false" Unicode="false" />
+          <Property Name="PERCENT_INC" Type="Decimal" Precision="4" Scale="2" />
+          <Property Name="TITLE2_NAME_ENG" Type="String" MaxLength="40" FixedLength="false" Unicode="false" />
+          <Property Name="ENTRY_NO" Type="Byte" />
+          <Property Name="TITLE_NAME3" Type="String" MaxLength="40" FixedLength="false" Unicode="false" />
+          <Property Name="TITLE_NAME3_ENG" Type="String" MaxLength="40" FixedLength="false" Unicode="false" />
+          <Property Name="EMP_TYPE" Type="String" MaxLength="2" FixedLength="false" Unicode="false" />
+          <Property Name="EMP_SOURCE" Type="String" MaxLength="2" FixedLength="false" Unicode="false" />
+          <Property Name="LOGIN" Type="String" MaxLength="15" FixedLength="false" Unicode="false" />
+          <Property Name="MODIFY_DATE" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="MODIFY_USER" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="EMP_HEAD" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityContainer Name="PersonelOracleEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="P_STAFF" EntityType="Self.P_STAFF" />
+          <EntitySet Name="C_TITLE" EntityType="PersonelOracleModel.C_TITLE" />
+        </EntityContainer>
+        <EntityType Name="C_TITLE">
+          <Key>
+            <PropertyRef Name="TITLE_ID" />
+          </Key>
+          <Property Name="TITLE_ID" Type="String" Nullable="false" MaxLength="2" FixedLength="false" Unicode="false" />
+          <Property Name="TITLE_NAME_THAI" Type="String" MaxLength="25" FixedLength="false" Unicode="false" />
+          <Property Name="TITLE_NAME_ENG" Type="String" MaxLength="25" FixedLength="false" Unicode="false" />
+          <Property Name="TITLE_SHORT_THAI" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="TITLE_SHORT_ENG" Type="String" MaxLength="40" FixedLength="false" Unicode="false" />
+        </EntityType>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="PersonelOracleModelStoreContainer" CdmEntityContainer="PersonelOracleEntities">
+          <EntitySetMapping Name="P_STAFF">
+            <EntityTypeMapping TypeName="PersonelOracleModel.P_STAFF">
+              <MappingFragment StoreEntitySet="P_STAFF">
+                <ScalarProperty Name="STAFF_ID" ColumnName="STAFF_ID" />
+                <ScalarProperty Name="STAFF_TYPE_ID" ColumnName="STAFF_TYPE_ID" />
+                <ScalarProperty Name="STAFF_NAME_THAI" ColumnName="STAFF_NAME_THAI" />
+                <ScalarProperty Name="STAFF_NAME_ENG" ColumnName="STAFF_NAME_ENG" />
+                <ScalarProperty Name="STAFF_SNAME_THAI" ColumnName="STAFF_SNAME_THAI" />
+                <ScalarProperty Name="STAFF_SNAME_ENG" ColumnName="STAFF_SNAME_ENG" />
+                <ScalarProperty Name="TITLE_ID" ColumnName="TITLE_ID" />
+                <ScalarProperty Name="SEX_ID" ColumnName="SEX_ID" />
+                <ScalarProperty Name="STAFF_BIRTH_DATE" ColumnName="STAFF_BIRTH_DATE" />
+                <ScalarProperty Name="PROV_ID" ColumnName="PROV_ID" />
+                <ScalarProperty Name="GRAD_ID" ColumnName="GRAD_ID" />
+                <ScalarProperty Name="MARRIED_ID" ColumnName="MARRIED_ID" />
+                <ScalarProperty Name="RELIGION_ID" ColumnName="RELIGION_ID" />
+                <ScalarProperty Name="STAFF_SEAT_ID" ColumnName="STAFF_SEAT_ID" />
+                <ScalarProperty Name="STAFF_TAX_NUM" ColumnName="STAFF_TAX_NUM" />
+                <ScalarProperty Name="STAFF_APPROV_NUM" ColumnName="STAFF_APPROV_NUM" />
+                <ScalarProperty Name="POS_ID" ColumnName="POS_ID" />
+                <ScalarProperty Name="SALARY_C" ColumnName="SALARY_C" />
+                <ScalarProperty Name="SALARY_RANK" ColumnName="SALARY_RANK" />
+                <ScalarProperty Name="SALARY" ColumnName="SALARY" />
+                <ScalarProperty Name="STAFF_SAL_STEP" ColumnName="STAFF_SAL_STEP" />
+                <ScalarProperty Name="STAFF_APPROV_YEAR" ColumnName="STAFF_APPROV_YEAR" />
+                <ScalarProperty Name="STAFF_ACCEPT_DATE" ColumnName="STAFF_ACCEPT_DATE" />
+                <ScalarProperty Name="CAMPUS_ID" ColumnName="CAMPUS_ID" />
+                <ScalarProperty Name="PLAN_ID" ColumnName="PLAN_ID" />
+                <ScalarProperty Name="JOB_ID" ColumnName="JOB_ID" />
+                <ScalarProperty Name="FAC_ID" ColumnName="FAC_ID" />
+                <ScalarProperty Name="DEPT_ID" ColumnName="DEPT_ID" />
+                <ScalarProperty Name="SECT_ID" ColumnName="SECT_ID" />
+                <ScalarProperty Name="STAFF_BLOOD" ColumnName="STAFF_BLOOD" />
+                <ScalarProperty Name="STAFF_PICTURE" ColumnName="STAFF_PICTURE" />
+                <ScalarProperty Name="STAFF_DEPART" ColumnName="STAFF_DEPART" />
+                <ScalarProperty Name="STAFF_EMAIL" ColumnName="STAFF_EMAIL" />
+                <ScalarProperty Name="STAFF_END" ColumnName="STAFF_END" />
+                <ScalarProperty Name="TITLE_NAME" ColumnName="TITLE_NAME" />
+                <ScalarProperty Name="STAFF_STEP_TYPE" ColumnName="STAFF_STEP_TYPE" />
+                <ScalarProperty Name="UNIT_ID" ColumnName="UNIT_ID" />
+                <ScalarProperty Name="STAFF_TYPE" ColumnName="STAFF_TYPE" />
+                <ScalarProperty Name="DATE_ID" ColumnName="DATE_ID" />
+                <ScalarProperty Name="STAFF_OUT" ColumnName="STAFF_OUT" />
+                <ScalarProperty Name="STAFF_PERS_ID" ColumnName="STAFF_PERS_ID" />
+                <ScalarProperty Name="OLD_STAFF_ID" ColumnName="OLD_STAFF_ID" />
+                <ScalarProperty Name="MAIN_MAJOR" ColumnName="MAIN_MAJOR" />
+                <ScalarProperty Name="NEWID" ColumnName="NEWID" />
+                <ScalarProperty Name="STAFF_DATE_OUT" ColumnName="STAFF_DATE_OUT" />
+                <ScalarProperty Name="NUM_REST" ColumnName="NUM_REST" />
+                <ScalarProperty Name="STAFF_FULL_SAL" ColumnName="STAFF_FULL_SAL" />
+                <ScalarProperty Name="SUBUNIT_ID" ColumnName="SUBUNIT_ID" />
+                <ScalarProperty Name="OLD_SALARY_C" ColumnName="OLD_SALARY_C" />
+                <ScalarProperty Name="OLD_SALARY" ColumnName="OLD_SALARY" />
+                <ScalarProperty Name="ADM_POS" ColumnName="ADM_POS" />
+                <ScalarProperty Name="STAFF_NO" ColumnName="STAFF_NO" />
+                <ScalarProperty Name="BUDGET_SALARY" ColumnName="BUDGET_SALARY" />
+                <ScalarProperty Name="BUDGET_TIME" ColumnName="BUDGET_TIME" />
+                <ScalarProperty Name="WORK_TIME" ColumnName="WORK_TIME" />
+                <ScalarProperty Name="WORK_COND" ColumnName="WORK_COND" />
+                <ScalarProperty Name="INS_ID" ColumnName="INS_ID" />
+                <ScalarProperty Name="USE_YEAR1" ColumnName="USE_YEAR1" />
+                <ScalarProperty Name="USE_YEAR2" ColumnName="USE_YEAR2" />
+                <ScalarProperty Name="YEAR_BLANK" ColumnName="YEAR_BLANK" />
+                <ScalarProperty Name="POS_LACK" ColumnName="POS_LACK" />
+                <ScalarProperty Name="INCOME_SALARY" ColumnName="INCOME_SALARY" />
+                <ScalarProperty Name="WORK_TIME_DAY" ColumnName="WORK_TIME_DAY" />
+                <ScalarProperty Name="EXIT_STS" ColumnName="EXIT_STS" />
+                <ScalarProperty Name="P_RACE" ColumnName="P_RACE" />
+                <ScalarProperty Name="AMT_TYPE" ColumnName="AMT_TYPE" />
+                <ScalarProperty Name="P_COUNTRY" ColumnName="P_COUNTRY" />
+                <ScalarProperty Name="P_CITIZEN" ColumnName="P_CITIZEN" />
+                <ScalarProperty Name="WORK_BEGIN" ColumnName="WORK_BEGIN" />
+                <ScalarProperty Name="WORK_END" ColumnName="WORK_END" />
+                <ScalarProperty Name="SALARY_OCT_PYEAR" ColumnName="SALARY_OCT_PYEAR" />
+                <ScalarProperty Name="SALARY_C_OCT" ColumnName="SALARY_C_OCT" />
+                <ScalarProperty Name="STEP_OCT" ColumnName="STEP_OCT" />
+                <ScalarProperty Name="SAL_STEP_OLD" ColumnName="SAL_STEP_OLD" />
+                <ScalarProperty Name="REST_COLL" ColumnName="REST_COLL" />
+                <ScalarProperty Name="REST_USED" ColumnName="REST_USED" />
+                <ScalarProperty Name="TITLE_NAME2" ColumnName="TITLE_NAME2" />
+                <ScalarProperty Name="PERCENT_INC" ColumnName="PERCENT_INC" />
+                <ScalarProperty Name="TITLE2_NAME_ENG" ColumnName="TITLE2_NAME_ENG" />
+                <ScalarProperty Name="ENTRY_NO" ColumnName="ENTRY_NO" />
+                <ScalarProperty Name="TITLE_NAME3" ColumnName="TITLE_NAME3" />
+                <ScalarProperty Name="TITLE_NAME3_ENG" ColumnName="TITLE_NAME3_ENG" />
+                <ScalarProperty Name="EMP_TYPE" ColumnName="EMP_TYPE" />
+                <ScalarProperty Name="EMP_SOURCE" ColumnName="EMP_SOURCE" />
+                <ScalarProperty Name="LOGIN" ColumnName="LOGIN" />
+                <ScalarProperty Name="MODIFY_DATE" ColumnName="MODIFY_DATE" />
+                <ScalarProperty Name="MODIFY_USER" ColumnName="MODIFY_USER" />
+                <ScalarProperty Name="EMP_HEAD" ColumnName="EMP_HEAD" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="C_TITLE">
+            <EntityTypeMapping TypeName="PersonelOracleModel.C_TITLE">
+              <MappingFragment StoreEntitySet="C_TITLE">
+                <ScalarProperty Name="TITLE_SHORT_ENG" ColumnName="TITLE_SHORT_ENG" />
+                <ScalarProperty Name="TITLE_SHORT_THAI" ColumnName="TITLE_SHORT_THAI" />
+                <ScalarProperty Name="TITLE_NAME_ENG" ColumnName="TITLE_NAME_ENG" />
+                <ScalarProperty Name="TITLE_NAME_THAI" ColumnName="TITLE_NAME_THAI" />
+                <ScalarProperty Name="TITLE_ID" ColumnName="TITLE_ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>
