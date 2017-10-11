@@ -16,6 +16,14 @@ namespace ServiceAPI.Tests.Controllers
     {
 
         [TestMethod]
+
+        public void GetStaff()
+        {
+            PersonelController controller = new PersonelController();
+            IEnumerable<PersonelModel> result = controller.Get();
+        }
+
+        [TestMethod]
         public void GetByName()
         {
             PersonelController controller = new PersonelController();

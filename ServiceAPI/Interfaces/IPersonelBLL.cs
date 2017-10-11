@@ -9,6 +9,7 @@ namespace ServiceAPI.Interfaces
 {
     public interface IPersonelBLL
     {
+        IEnumerable<PersonelModel> GetStaff();
         List<PersonelModel> GetStaffByName(string name);
         PersonelModel GetStaffByID(string ID);
     }

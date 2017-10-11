@@ -7,18 +7,30 @@ using System.Web.Http;
 using ServiceAPI.Interfaces;
 using ServiceAPI.BLL;
 using ServiceAPI.Models;
+using ServiceAPI.Security;
 
 namespace ServiceAPI.Controllers
 {
+    [BasicAuthentication]
     public class PersonelController : ApiController
     {
 
         IPersonelBLL Ipb = new PersonelBLL();
 
         // GET api/<controller>
-        public IEnumerable<string> Get()
+        public IEnumerable<PersonelModel> Get()
         {
-            return new string[] { "value1", "value2" };
+            IEnumerable<PersonelModel> Staff = null;
+            try
+            {
+                Staff = Ipb.GetStaff();
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
+            return Staff;
         }
 
         // GET api/<controller>/
@@ -40,19 +52,19 @@ namespace ServiceAPI.Controllers
         }
 
         // POST api/<controller>
-        public void Post([FromBody]string value)
-        {
-        }
+        //public void Post([FromBody]string value)
+        //{
+        //}
 
-        // PUT api/<controller>/5
-        public void Put(int id, [FromBody]string value)
-        {
-        }
+        //// PUT api/<controller>/5
+        //public void Put(int id, [FromBody]string value)
+        //{
+        //}
 
-        // DELETE api/<controller>/5
-        public void Delete(int id)
-        {
-        }
+        //// DELETE api/<controller>/5
+        //public void Delete(int id)
+        //{
+        //}
 
         // GET api/<controller>?name={name}
         public IEnumerable<PersonelModel> GetByName(string name)

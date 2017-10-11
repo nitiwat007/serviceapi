@@ -15,6 +15,17 @@ namespace ServiceAPI.Tests
     {   
 
         [TestMethod]
+        public void TestGetStaff()
+        {
+            IPersonelBLL PersonelBLL = new PersonelBLL();
+            int getStaff = PersonelBLL.GetStaffByName("นิติ").Count;
+
+            Assert.AreNotEqual(0, getStaff);
+
+        }
+
+
+        [TestMethod]
         public void TestGetStaffByName()
         {
             IPersonelBLL PersonelBLL = new PersonelBLL();

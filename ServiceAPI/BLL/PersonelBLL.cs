@@ -16,6 +16,11 @@ namespace ServiceAPI.BLL
             
         }
 
+        public IEnumerable<PersonelModel> GetStaff()
+        {
+            return Ipr.GetStaff();
+        }
+
         public PersonelModel GetStaffByID(string ID)
         {
             return Ipr.GetStaffByID(ID);
@@ -25,5 +30,7 @@ namespace ServiceAPI.BLL
         {
             return Ipr.GetStaffByName(name);
         }
+
+        
     }
 }
