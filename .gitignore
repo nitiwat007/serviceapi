@@ -242,4 +242,5 @@ ModelManifest.xml
 .fake/
 
 # Configuration File with Credential
-*.config
+Web.config
+App.config
