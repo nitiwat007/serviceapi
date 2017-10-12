@@ -1,4 +1,4 @@
-﻿// T4 code generation is enabled for model 'c:\users\amd_t\documents\visual studio 2015\Projects\ServiceAPI\ServiceAPI\DataSources\PersonelOracleModel.edmx'. 
+﻿// T4 code generation is enabled for model 'C:\Users\AMD_T\Documents\Visual Studio 2015\Projects\ServiceAPI\ServiceAPI\DataSources\PersonelOracleModel.edmx'. 
 // To enable legacy code generation, change the value of the 'Code Generation Strategy' designer
 // property to 'Legacy ObjectContext'. This property is available in the Properties Window when the model
 // is open in the designer.

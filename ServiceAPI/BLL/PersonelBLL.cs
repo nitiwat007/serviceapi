@@ -30,7 +30,6 @@ namespace ServiceAPI.BLL
         {
             return Ipr.GetStaffByName(name);
         }
-
-        
+    
     }
 }

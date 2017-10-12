@@ -21,6 +21,9 @@ namespace ServiceAPI.Tests.Controllers
         {
             PersonelController controller = new PersonelController();
             IEnumerable<PersonelModel> result = controller.Get();
+
+            Assert.IsNotNull(result);
+            Assert.AreNotEqual(0, result.Count());
         }
 
         [TestMethod]

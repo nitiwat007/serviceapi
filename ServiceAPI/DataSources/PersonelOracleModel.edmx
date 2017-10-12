@@ -5,6 +5,24 @@
     <!-- SSDL content -->
     <edmx:StorageModels>
     <Schema Namespace="PersonelOracleModel.Store" Provider="Oracle.ManagedDataAccess.Client" ProviderManifestToken="10.2" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="C_FACULTY">
+          <Key>
+            <PropertyRef Name="FAC_ID" />
+          </Key>
+          <Property Name="FAC_ID" Type="varchar2" MaxLength="2" Nullable="false" />
+          <Property Name="FAC_NAME_THAI" Type="varchar2" MaxLength="70" />
+          <Property Name="FAC_NAME_ENG" Type="varchar2" MaxLength="70" />
+          <Property Name="CAMP_ID" Type="varchar2" MaxLength="2" />
+          <Property Name="FAC_TEL_FAX" Type="varchar2" MaxLength="50" />
+          <Property Name="STAFF_NUMBER" Type="number" Precision="5" Scale="0" />
+          <Property Name="EMP_NUMBER" Type="number" Precision="5" Scale="0" />
+          <Property Name="FAC_DESC" Type="varchar2" MaxLength="60" />
+          <Property Name="OLD_FAC" Type="varchar2" MaxLength="2" />
+          <Property Name="SHORT_NAME_THAI" Type="varchar2" MaxLength="10" />
+          <Property Name="N_FAC_ID" Type="varchar2" MaxLength="5" />
+          <Property Name="ISCED_ID" Type="varchar2" MaxLength="10" />
+          <Property Name="FAC_GRP_ID" Type="varchar2" MaxLength="2" />
+        </EntityType>
         <EntityType Name="C_TITLE">
           <Key>
             <PropertyRef Name="TITLE_ID" />
@@ -109,6 +127,7 @@
           <Property Name="EMP_HEAD" Type="varchar2" MaxLength="50" />
         </EntityType>
         <EntityContainer Name="PersonelOracleModelStoreContainer">
+          <EntitySet Name="C_FACULTY" EntityType="Self.C_FACULTY" Schema="CENTRAL" store:Type="Tables" />
           <EntitySet Name="C_TITLE" EntityType="Self.C_TITLE" Schema="CENTRAL" store:Type="Tables" />
           <EntitySet Name="P_STAFF" EntityType="Self.P_STAFF" Schema="PERSONEL" store:Type="Tables" />
         </EntityContainer>
@@ -212,6 +231,7 @@
         <EntityContainer Name="PersonelOracleEntities" annotation:LazyLoadingEnabled="true">
           <EntitySet Name="P_STAFF" EntityType="Self.P_STAFF" />
           <EntitySet Name="C_TITLE" EntityType="PersonelOracleModel.C_TITLE" />
+          <EntitySet Name="C_FACULTY" EntityType="PersonelOracleModel.C_FACULTY" />
         </EntityContainer>
         <EntityType Name="C_TITLE">
           <Key>
@@ -222,6 +242,24 @@
           <Property Name="TITLE_NAME_ENG" Type="String" MaxLength="25" FixedLength="false" Unicode="false" />
           <Property Name="TITLE_SHORT_THAI" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
           <Property Name="TITLE_SHORT_ENG" Type="String" MaxLength="40" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="C_FACULTY">
+          <Key>
+            <PropertyRef Name="FAC_ID" />
+          </Key>
+          <Property Name="FAC_ID" Type="String" Nullable="false" MaxLength="2" FixedLength="false" Unicode="false" />
+          <Property Name="FAC_NAME_THAI" Type="String" MaxLength="70" FixedLength="false" Unicode="false" />
+          <Property Name="FAC_NAME_ENG" Type="String" MaxLength="70" FixedLength="false" Unicode="false" />
+          <Property Name="CAMP_ID" Type="String" MaxLength="2" FixedLength="false" Unicode="false" />
+          <Property Name="FAC_TEL_FAX" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="STAFF_NUMBER" Type="Int16" />
+          <Property Name="EMP_NUMBER" Type="Int16" />
+          <Property Name="FAC_DESC" Type="String" MaxLength="60" FixedLength="false" Unicode="false" />
+          <Property Name="OLD_FAC" Type="String" MaxLength="2" FixedLength="false" Unicode="false" />
+          <Property Name="SHORT_NAME_THAI" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="N_FAC_ID" Type="String" MaxLength="5" FixedLength="false" Unicode="false" />
+          <Property Name="ISCED_ID" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="FAC_GRP_ID" Type="String" MaxLength="2" FixedLength="false" Unicode="false" />
         </EntityType>
       </Schema>
     </edmx:ConceptualModels>
@@ -331,6 +369,25 @@
                 <ScalarProperty Name="TITLE_NAME_ENG" ColumnName="TITLE_NAME_ENG" />
                 <ScalarProperty Name="TITLE_NAME_THAI" ColumnName="TITLE_NAME_THAI" />
                 <ScalarProperty Name="TITLE_ID" ColumnName="TITLE_ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="C_FACULTY">
+            <EntityTypeMapping TypeName="PersonelOracleModel.C_FACULTY">
+              <MappingFragment StoreEntitySet="C_FACULTY">
+                <ScalarProperty Name="FAC_GRP_ID" ColumnName="FAC_GRP_ID" />
+                <ScalarProperty Name="ISCED_ID" ColumnName="ISCED_ID" />
+                <ScalarProperty Name="N_FAC_ID" ColumnName="N_FAC_ID" />
+                <ScalarProperty Name="SHORT_NAME_THAI" ColumnName="SHORT_NAME_THAI" />
+                <ScalarProperty Name="OLD_FAC" ColumnName="OLD_FAC" />
+                <ScalarProperty Name="FAC_DESC" ColumnName="FAC_DESC" />
+                <ScalarProperty Name="EMP_NUMBER" ColumnName="EMP_NUMBER" />
+                <ScalarProperty Name="STAFF_NUMBER" ColumnName="STAFF_NUMBER" />
+                <ScalarProperty Name="FAC_TEL_FAX" ColumnName="FAC_TEL_FAX" />
+                <ScalarProperty Name="CAMP_ID" ColumnName="CAMP_ID" />
+                <ScalarProperty Name="FAC_NAME_ENG" ColumnName="FAC_NAME_ENG" />
+                <ScalarProperty Name="FAC_NAME_THAI" ColumnName="FAC_NAME_THAI" />
+                <ScalarProperty Name="FAC_ID" ColumnName="FAC_ID" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>

@@ -12,35 +12,35 @@ using ServiceAPI.Security;
 namespace ServiceAPI.Controllers
 {
     [BasicAuthentication]
-    public class PersonelController : ApiController
+    public class FacultyController : ApiController
     {
 
-        IPersonelBLL Ipb = new PersonelBLL();
+        IFacultyBLL Ifb = new FacultyBLL();
 
         // GET api/<controller>
-        public IEnumerable<PersonelModel> Get()
+        public IEnumerable<FacultyModel> Get()
         {
-            IEnumerable<PersonelModel> Staff = null;
+            IEnumerable<FacultyModel> Faculty = null;
             try
             {
-                Staff = Ipb.GetStaff();
+                Faculty = Ifb.GetFaculty();
             }
             catch (Exception)
             {
 
                 throw;
             }
-            return Staff;
+            return Faculty;
         }
 
-        // GET api/<controller>/
-        public PersonelModel Get(string ID)
+        // GET api/<controller>/5
+        public FacultyModel Get(string id)
         {
-            
-            PersonelModel Staff = null;
+            FacultyModel Faculty = null;
+
             try
             {
-                Staff=Ipb.GetStaffByID(ID);
+                Faculty = Ifb.GetFacultyByID(id);
             }
             catch (Exception)
             {
@@ -48,16 +48,16 @@ namespace ServiceAPI.Controllers
                 throw;
             }
 
-            return Staff;
+            return Faculty;
         }
 
-        public IEnumerable<PersonelModel> GetByName(string name)
+        public IEnumerable<FacultyModel> GetByName(string name)
         {
-            IEnumerable<PersonelModel> Staff = null;
+            IEnumerable<FacultyModel> Faculty = null;
 
             try
             {
-                Staff = Ipb.GetStaffByName(name);
+                Faculty = Ifb.GetFacultyByName(name);
             }
             catch (Exception)
             {
@@ -65,7 +65,7 @@ namespace ServiceAPI.Controllers
                 throw;
             }
 
-            return Staff;
+            return Faculty;
         }
 
         // POST api/<controller>
@@ -82,8 +82,5 @@ namespace ServiceAPI.Controllers
         //public void Delete(int id)
         //{
         //}
-
-        // GET api/<controller>?name={name}
-
     }
 }

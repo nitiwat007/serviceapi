@@ -27,5 +27,6 @@ namespace ServiceAPI.DataSources
     
         public virtual DbSet<P_STAFF> P_STAFF { get; set; }
         public virtual DbSet<C_TITLE> C_TITLE { get; set; }
+        public virtual DbSet<C_FACULTY> C_FACULTY { get; set; }
     }
 }

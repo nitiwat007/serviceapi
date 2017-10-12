@@ -7,6 +7,7 @@
       <Diagram DiagramId="6ab546bcb9b94bd1bd80cd42d3241f06" Name="Diagram1">
         <EntityTypeShape EntityType="PersonelOracleModel.P_STAFF" Width="1.5" PointX="2" PointY="0.5" IsExpanded="true" />
         <EntityTypeShape EntityType="PersonelOracleModel.C_TITLE" Width="1.75" PointX="4.375" PointY="0.625" />
+        <EntityTypeShape EntityType="PersonelOracleModel.C_FACULTY" Width="1.5" PointX="4.375" PointY="3.75" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>
